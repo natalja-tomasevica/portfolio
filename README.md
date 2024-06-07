@@ -57,7 +57,7 @@
     ```ini
     # Django settings
     SECRET_KEY='your_secret_key'
-    DEBUG=True # Set to False in production
+    DEBUG=True
 
     # Database settings
     DB_NAME='your_db_name'
