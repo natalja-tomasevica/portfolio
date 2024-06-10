@@ -1,6 +1,4 @@
-# portfolio
-
-## Getting started
+## Please follow the steps below to run my portfolio on your computer
 
 ### Prerequisites
 
@@ -86,5 +84,3 @@
     ```bash
     python manage.py runserver
     ```
-
-Your project should now be running on `http://localhost:8000/`.
