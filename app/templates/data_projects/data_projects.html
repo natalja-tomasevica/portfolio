@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<head>
+  <title>DS and ML Projects</title>
+</head>
+
+<h2>Data Science and Machine Learning Projects</h2>
+
+<div class="row row-cols-1 row-cols-md-3 g-4" style="justify-content: center; width: 100%;">
+  <div class="col" style="width: 500px; margin-right:20px!important;">
+    <div class="card h-100">
+      <img src="{% static 'app/spiral_galaxy_NGC_2903.jpg' %}" class="card-img-top" alt="Spiral galaxy NGC 2903" width='500px' height="250px">
+      <div class="card-body">
+        <h5 class="card-title"><a href="/data_projects/predicting_stars_galaxies_quasars_project">
+          Building a machine learning model to predict a class of an astronomical object</a></h5>
+        <p class="card-text">
+          <strong>Description:</strong> Analysing a dataset of 10,000 records of observations of space and building a machine learning model to predict if an observation is a star, a galaxy, or a quasar </br>
+          <strong>Technologies used:</strong> Jupyter Notebook; Python libraries: NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow with Keras</br>
+          <strong>Outcome:</strong> Built decision tree, linear regression, and KNN classification models
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" style="width: 500px;">
+    <div class="card h-100">
+      <img src="{% static 'app/churn_prediction.jpg' %}" class="card-img-top" alt="Churn prediction" width='500px' height="250px">
+      <div class="card-body">
+        <h5 class="card-title"><a href="/data_projects/user_churn_project">Building a machine learning model to predict user churn</a></h5>
+        <p class="card-text">
+          <strong>Description:</strong> Analysing a dataset of 15,000 records of user data and building a machine learning model to predict user churn</br>
+          <strong>Technologies used:</strong> Jupyter Notebook; Python libraries: NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, SciPy</br>
+          <strong>Outcome:</strong> Built random forest and XGBoost classification models</br>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.card{
+  width: 500px;
+}
+</style>
+
+{% endblock content %}

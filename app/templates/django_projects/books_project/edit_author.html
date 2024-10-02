@@ -1,0 +1,40 @@
+
+{% extends 'base_books.html' %}
+
+{% block content %}
+
+<head>
+    <title>Edit Author</title>
+</head>
+
+<h2>Edit author</h2>
+
+<center>
+
+<body>
+    <div class="container mt-5">
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="id_full_name">Author Full Name</label>
+                <input type="text" name="full_name" value="{{ form.full_name.value|default_if_none:''}}" class="form-control" id="id_full_name">
+            </div>
+
+            <div class="form-group">
+                <label for="id_age">Author Age</label>
+                <input type="number" name="age" value="{{ form.age.value|default_if_none:''}}" class="form-control" id="id_age">
+            </div>
+
+            <div class="form-group">
+                <label for="id_languages">Author Languages</label>
+                <input type="text" name="languages" value="{{ form.languages.value|default_if_none:''}}" class="form-control" id="id_languages">
+            </div>
+
+        </br><button class="btn btn-secondary">Edit</button>
+        </form>
+    </div>
+</body>
+
+</center>
+{% endblock content%}

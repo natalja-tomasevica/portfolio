@@ -1,0 +1,60 @@
+{% extends 'base_books.html' %}
+
+{% block content %}
+
+
+<head>
+    <title>Edit Book</title>
+</head>
+
+<h2>Edit book</h2>
+
+<center>
+
+<body>
+    <div class="container mt-5">
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="id_title">Book Title</label>
+                <input type="text" name="title" class="form-control" id="id_title" value="{{ form.title.value|default_if_none:''}}">
+                </div>
+        
+                <div class="form-group">
+                    <label for="id_author_full_name">Author Full Name</label>
+                    <input type="text" name="author_full_name" class="form-control" id="id_author_full_name" value="{{ form.author_full_name.value|default_if_none:''}}">
+                </div>
+                
+                <div class="form-group">
+                    <label for="id_author_age">Author Age</label>
+                    <input type="number" name="author_age" class="form-control" id="id_author_age" value="{{ form.author_age.value|default_if_none:''}}">
+                </div>
+        
+                <div class="form-group">
+                    <label for="id_author_languages">Author Languages</label>
+                    <input type="text" name="author_languages" class="form-control" id="id_author_languages" value="{{ form.author_languages.value|default_if_none:''}}">
+                </div>
+        
+                <div class="form-group">
+                    <label for="id_genre">Book Genre</label>
+                    <input type="text" name="genre" class="form-control" id="id_genre" value="{{ form.genre.value|default_if_none:''}}">
+                </div>
+        
+                <div class="form-group">
+                    <label for="id_pages">Number of Pages</label>
+                    <input type="number" name="pages" class="form-control" id="id_pages" value="{{ form.pages.value|default_if_none:''}}">
+                </div>
+        
+                <div class="form-group">
+                    <label for="id_description">Book Description</label>
+                    <textarea name="description" class="form-control" id="id_description" placeholder="Book Description" rows="3">{{ form.description.value|default_if_none:''}}</textarea>
+                </div>
+
+        </br><button class="btn btn-secondary">Edit</button>
+        </form>
+    </div>
+</body>
+
+</center>
+{% endblock content%}

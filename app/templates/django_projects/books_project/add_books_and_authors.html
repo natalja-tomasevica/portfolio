@@ -1,0 +1,59 @@
+
+{% extends 'base_books.html' %}
+
+{% block content %}
+
+<head>
+    <title>Add Books and Authors</title>
+</head>
+
+<h2>Add books and authors</h2>
+<center>
+<body>
+    <div class="container mt-5">
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="form-group">
+            <label for="id_title"></label>
+            <input type="text" name="title" class="form-control" id="id_title" placeholder="Book Title">
+            </div>
+
+            <div class="form-group">
+                <label for="id_author_full_name"></label>
+                <input type="text" name="author_full_name" class="form-control" id="id_author_full_name" placeholder="Author Full Name">
+            </div>
+            
+            <div class="form-group">
+                <label for="id_author_age"></label>
+                <input type="number" name="author_age" class="form-control" id="id_author_age" placeholder="Author Age">
+            </div>
+
+            <div class="form-group">
+                <label for="id_author_languages"></label>
+                <input type="text" name="author_languages" class="form-control" id="id_author_languages" placeholder="Author Languages">
+            </div>
+
+            <div class="form-group">
+                <label for="id_genre"></label>
+                <input type="text" name="genre" class="form-control" id="id_genre" placeholder="Book Genre">
+            </div>
+
+            <div class="form-group">
+                <label for="id_pages"></label>
+                <input type="number" name="pages" class="form-control" id="id_pages" placeholder="Number of Pages" >
+            </div>
+
+            <div class="form-group">
+                <label for="id_description"></label>
+                <textarea name="description" class="form-control" id="id_description" placeholder="Book Description" rows="3"></textarea>
+            </div>
+
+            
+
+        </br><button class="btn btn-secondary">Add</button>
+        </form>
+    </div>
+</body>
+</center>
+{% endblock content%}

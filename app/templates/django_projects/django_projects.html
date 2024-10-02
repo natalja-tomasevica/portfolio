@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<head>
+  <title>Django Projects</title>
+</head>
+
+<h2>Django Projects</h2>
+
+<div class="row row-cols-1 row-cols-md-3 g-4" style="justify-content: center; width: 100%;">
+  <div class="col" style="width: 500px; margin-right:20px!important;">
+    <div class="card h-100">
+      <img src="{% static 'app/calculator.jpg' %}" class="card-img-top" alt="Calculator" width='500px' height="250px">
+      <div class="card-body">
+        <h5 class="card-title"><a href="/django_projects/calculator_project">
+          Building a calculator app</a></h5>
+        <p class="card-text">
+          <strong>Description:</strong> Built a simple calculator that can perform the main arithmetic operations</br>
+          <strong>Technologies used:</strong> Django</br>
+          <strong>Languages:</strong> Python, JavaScript, CSS (a style sheet language), HTML (a markup language)</br>
+          <strong>Outcome:</strong> Successfully built a calculator and put it on my website
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" style="width: 500px;">
+    <div class="card h-100">
+      <img src="{% static 'app/books.jpg' %}" class="card-img-top" alt="Books" width='500px' height="250px">
+      <div class="card-body">
+        <h5 class="card-title"><a href="/django_projects/books_project/books_main_page">Building a books app that allows users to perform CRUD operations</a></h5>
+        <p class="card-text">
+          <strong>Description:</strong> Built an app, where users can create, read, update, and delete data about books and authors, which is stored in a MySQL database</br>
+          <strong>Technologies used:</strong> Django, MySQL</br>
+          <strong>Languages:</strong> Python, SQL, JavaScript, CSS (a style sheet language), HTML (a markup language)</br>
+          <strong>Outcome:</strong> Successfully built a books app and put it on my website
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.card{
+  width: 500px;
+}
+</style>
+{% endblock content %}
