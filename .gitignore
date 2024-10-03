@@ -1,0 +1,39 @@
+# Ignore Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+env/
+venv/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore compiled code
+*.o
+*.so
+*.a
+
+# Ignore log files and temporary files
+*.log
+*.tmp
+
+# Ignore node_modules for JavaScript projects
+node_modules/
+
+# Ignore Django migrations
+*/migrations/*
+
+# Ignore database
+*.sqlite3
+
+# Ignore media files
+/media/
+
+# Ignore environment variables
+.env
+*.env
+
+# Ignore local configuration files
+local_settings.py
+
