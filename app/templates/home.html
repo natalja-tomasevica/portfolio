@@ -4,52 +4,50 @@
 
 {% load static %}
 
-<head>
-    <title>Home</title>
-</head>
+{% block inner_content %}
 
-<div class="container-fluid mx-auto my-auto">
-  <p class="mx-auto my-auto" style="font-size: larger;">
-    <i>Welcome to my personal website! Here, you will find information about my education, projects, skills, and experiences.</i>
+<head><title>Home</title></head>
 
-  </p>
-  <p class="mx-auto my-auto" style="font-size: larger;">
+<div class="container-fluid my-5">
+  
+    <p class="mx-auto my-auto" style="font-size: larger;">
+    <i>Welcome to my personal website! Here, you will find information about my education, projects, skills, and experience.</i></br>
     <strong>Natalja Tomasevica - Aspiring Data Analyst with Expertise in Data-Driven Solutions, Machine Learning, and Full-Stack Development</strong>
   </p>
-</br>
+  
   <div class="row align-items-center">
     <!-- Image Column -->
-    <div class="col-md-4 mb-3">
-      <img src="{% static 'app/20240414_144221.jpg' %}" class="figure-img img-fluid rounded" alt="Natalja">
+     <div class="col-md-4">
+      <img src="{% static 'app/20240414_144221.jpg' %}" class="figure-img img-fluid rounded" alt="Natalja"></div>
+      <!-- Text Column -->
+       <div class="col-md-8">
+        <p class="card-text">
+          <strong>Introduction</strong></br>
+          I recently graduated from Northumbria University with a degree in Physics with Astrophysics. Pursuing a STEM degree equipped me with a solid foundation in physics 
+          and mathematics as well as pushed me to be resilient and always keep learning. During my studies, I developed a strong passion for 
+          data analytics, machine learning, and full-stack development, which led me to pursue specialised projects and certifications to strengthen my skills and gain experience.</br>
+          I have earned Meta Data Analyst and Google Advanced Data Analytics Professional Certificates focused on data analytics and machine learning. Throughout these programmes, I strengthened my skills in working with large datasets, applying data analysis techniques, and building machine learning models. 
+          In addition, I have completed the Meta Back-End Developer Professional Certificate designed to prepare me for an entry-level career in development. This certification covered key areas such as Python programming, version control with Git, and Django framework. All specialisations provided hands-on, practice-based learning experiences, allowing me to enhance my proficiency in these comprehensive fields.</br>
+          I am passionate about continuous learning and eager to apply my background and expertise to contribute to innovative tech projects and solutions!
+        </p>
+      </div>
     </div>
-    <!-- Text Column -->
-    <div class="col-md-8">
-      <p class="card-text">
-        <strong>Introduction</strong></br>
-        I recently graduated from Northumbria University with a degree in Physics with Astrophysics. Pursuing a STEM degree equipped me with a solid foundation in physics 
-        and mathematics as well as pushed me to be resilient and always keep learning. During my studies, I developed a strong passion for 
-        data analytics, machine learning, and full-stack development, which led me to pursue specialised projects and certifications to strengthen my skills.</br>
-        I have earned Meta Data Analyst and Google Advanced Data Analytics Professional Certificates focused on data analytics and machine learning. Throughout these programmes, I strengthened my skills in working with large datasets, applying data analysis techniques, and building machine learning models. 
-        In addition, I have completed the Meta Back-End Developer Professional Certificate designed to prepare me for an entry-level career in development. This certification covered key areas such as Python programming, version control with Git, and Django framework.</br>
-        All specialisations provided hands-on, practice-based learning experiences, allowing me to enhance my proficiency in these comprehensive fields. I am passionate about continuous learning and eager to apply my background and expertise to contribute to innovative tech projects and solutions.
-      </p>
-    </div>
+    
+    <p class="mx-auto my-auto"><strong>Portfolio</strong></br>
+      I have created this website to showcase my projects and prove my skills and knowledge. On the navigation bar, you can find the 
+      dropdown menu "Projects", where there are two sections "Data Projects" and "Django Projects". In Data Projects, I concentrated on analysing datasets by performing 
+      EDA (including creating data visualisations), and building machine learning models to make predictions. In Django Projects, I wanted to showcase my 
+      full-stack development skills. I created an interactive calculator and a data management application, which allows users to perform CRUD (i.e., create, read, update, delete) operations on the data stored in a database.
+    </p>
+    
+    <p class="mx-auto my-auto"><strong>CV and contact information</strong></br>
+      My CV in a PDF format can be accessed 
+      <a href="{% static 'app/CV_Natalja_Tomasevica.pdf' %}" download>here</a>. At my GitHub account <a href="https://github.com/natalja-tomasevica">github.com/natalja-tomasevica</a>, you can find all my repositories and see my code. 
+      Feel free to contact me at any time either by phone +447388248713, by email <a href="mailto:tomasevica.natalja@gmail.com">tomasevica.natalja@gmail.com</a>, or using LinkedIn <a href="https://www.linkedin.com/in/nataljatomasevica/">linkedin.com/in/nataljatomasevica/</a>.
+      I am always happy to discuss my skills and experience as well as to answer any questions you might have!
+    </p>
   </div>
 
-  <p class="mx-auto my-auto"><strong>Portfolio</strong></br>
-    I have created this website with the purpose to showcase my projects and prove my skills and knowledge. On the navigation bar, you can find the 
-    dropdown menu "Projects", where there are two sections "Data Projects" and "Django Projects". 
-    Currently, there are 2 projects in each section. In Data Projects, I concentrated on analysing large datasets by performing 
-    EDA (including creating data visualisations), and building machine learning models to make predictions. In Django Projects, I wanted to showcase my 
-    full-stack development skills. I created an interactive calculator and a data management application, which allows users to perform CRUD (i.e., create, read, update, delete) operations on the data stored in a database.
-  </p></br>
-
-  <p class="mx-auto my-auto"><strong>CV and contact information</strong></br>
-    My CV in a PDF format can be accessed 
-    <a href="{% static 'app/CV_Natalja_Tomasevica.pdf' %}" download>here</a>. At my GitHub account <a href="https://github.com/natalja-tomasevica">github.com/natalja-tomasevica</a>, you can find all my repositories and see my code. 
-    Feel free to contact me at any time either by phone +447388248713, by email <a href="mailto:tomasevica.natalja@gmail.com">tomasevica.natalja@gmail.com</a>, or using LinkedIn <a href="https://www.linkedin.com/in/nataljatomasevica/">linkedin.com/in/nataljatomasevica/</a>.
-    I am always happy to discuss my experiences and projects as well as to answer any questions you might have!
-  </p>
-</div>
+{% endblock %}
 
 {% endblock content %}

@@ -27,6 +27,10 @@
   </div>
 </nav>
 
+<!-- Content section -->
+<div class="content">
+</div>
+
 <style>
   /* Navbar styles */
   .navbar {
@@ -38,42 +42,68 @@
     height: 50px;
   }
 
-  /* Adjusted spacing for content to fit under navbar */
+  /* Spacing for content so it isn't hidden behind navbar */
   .content {
-    margin-top: 50px; /* Adjusted based on the navbar height */
+    margin-top: 60px; /* Adjust based on navbar height */
   }
 
+  /* Other styles here... */
   .navbar-toggler {
-    border-radius: 50%; /* Makes the toggle button rounded */
+    border-radius: 0% !important;
     padding: 5px;
-  }
+    width: 60px;
+    height: 40px;
+}
 
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  }
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
 
-  /* Centering text in the navbar */
-  .navbar-brand, .nav-link {
+/* Centering text in the navbar */
+.navbar-brand, .nav-link {
     color: black; /* Black for text */
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    display: flex !important; /* Use flexbox for centering */
+    align-items: center !important; /* Center vertically */
+    justify-content: center !important; /* Center horizontally */
     height: 100%; /* Make link take full height */
-  }
+}
 
-  /* Dropdown menu styles */
-  .dropdown-menu {
+/* Dropdown menu styles */
+.dropdown-menu {
     border-radius: 0.5rem; /* Rounds the corners of the dropdown menu */
-  }
+}
 
-  /* Dropdown item color */
-  .dropdown-item {
+/* Dropdown item color */
+.dropdown-item {
     color: black; /* Black for dropdown items */
     border-radius: 0.5rem; /* Rounds the corners of each dropdown item */
-  }
+}
 
-  /* Ensures background color is applied to the navbar when collapsed */
-  .navbar-collapse {
+/* Ensures background color is applied to the navbar when collapsed */
+.navbar-collapse {
     background-color: #B0A695; /* Light Blush Pink for the collapsed navbar */
-  }
+    border-radius: 0.5rem; /* Rounds the corners of the navbar */
+}
+
+.navbar a {
+    font-size: medium;
+}
+
+.navbar .nav-link {
+    color: black !important;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-link:hover {
+    color: black !important;
+    background-color: transparent !important;
+}
+
+/* Optional: Adjust the dropdown toggle specifically */
+.navbar .dropdown-toggle {
+    padding-right: 5px; /* Space between text and dropdown arrow */
+}
+
 </style>

@@ -1,37 +1,41 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+{% load static %}
+{% block inner_content %}
 <head>
     <title>Calculator Project</title>
 </head>
 
-<h2 class="mx-2 my-2">Calculator Projects</h2>
-
-<div id="body_calculator">
-    <div id="calculator">
-        <input id="display" readonly>
-        <div id="keys">
-            <button onclick="appendToDisplay('7')">7</button>
-            <button onclick="appendToDisplay('8')">8</button>
-            <button onclick="appendToDisplay('9')">9</button>
-            <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
-            <button onclick="appendToDisplay('4')">4</button>
-            <button onclick="appendToDisplay('5')">5</button>
-            <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
-            <button onclick="appendToDisplay('1')">1</button>
-            <button onclick="appendToDisplay('2')">2</button>
-            <button onclick="appendToDisplay('3')">3</button>
-            <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
-            <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="appendToDisplay('.')" class="operator-btn">.</button>
-            <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
-            <button onclick="calculate()" class="operator-btn">=</button>
-            <button onclick="clearDisplay()" class="operator-btn">C</button>
+<div class="container-fluid my-5">
+    <h2 class="mx-2 my-2">Calculator Projects</h2>
+   
+    <div id="body_calculator">
+        <div id="calculator">
+            <input id="display" readonly>
+            <div id="keys">
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('.')" class="operator-btn">.</button>
+                <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+                <button onclick="calculate()" class="operator-btn">=</button>
+                <button onclick="clearDisplay()" class="operator-btn">C</button>
+            </div>
         </div>
     </div>
-    
+
+
 <script>
 const display = document.getElementById("display");
 function appendToDisplay(input){
@@ -49,29 +53,36 @@ function calculate(){
     }
 }
 </script>
+
 <style>
 
-#body_calculator{
-    margin: 0px;
-    display: grid;
+/* Responsive styling */
+#body_calculator {
+    margin: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color:hwb(0 95% 5%);
+    background-color: hwb(0 95% 5%);
 }
 
-#calculator{
+
+/* Calculator styles */
+#calculator {
     background-color: hsl(0, 0%, 15%);
     border-radius: 15px;
-    max-width: 500px;
-    overflow: hidden;
-    height: 100%;
+    max-width: 100%; /* Responsive */
+    
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Lower z-index than the dropdown */
+    position: relative; /* Necessary to ensure z-index works */
 }
 
-#display{
+#display {
     width: 100%;
-    padding: 30px;
-    font-size: 3rem;
+    padding: 20px; /* Reduce padding for smaller screens */
+    font-size: 3rem; /* Larger text */
     text-align: left;
     border: none;
     background-color: hsl(0, 0%, 25%);
@@ -79,15 +90,15 @@ function calculate(){
     height: 110px;
 }
 
-#keys{
+#keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding: 25px;
+    gap: 10px; /* Space between buttons */
+    padding: 10px; /* Reduce padding for smaller screens */
 }
 
-button{
-    width: 80px;
+button {
+    width: 100%; /* Full width buttons */
     height: 80px;
     border-radius: 50px;
     border: none;
@@ -98,32 +109,42 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     background-color: hsl(0, 0%, 40%);
 }
 
-button:active{
+button:active {
     background-color: hsl(0, 0%, 50%);
 }
 
-.operator-btn{
+.operator-btn {
     background-color: hsl(35, 100%, 55%);
 }
 
-.operator-btn:hover{
+.operator-btn:hover {
     background-color: hsl(35, 100%, 65%);
 }
 
-.operator-btn:active{
-    background-color: hsl(35, 100%, 75%)
+.operator-btn:active {
+    background-color: hsl(35, 100%, 75%);
 }
 
-.h1_calculator{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    #display {
+        font-size: 2.5rem; /* Slightly smaller font for display */
+    }
 
+    button {
+        height: 60px; /* Adjust button height for smaller screens */
+        font-size: 1.5rem; /* Smaller button text */
+    }
+
+    #keys {
+        grid-template-columns: repeat(4, 1fr); /* Keep 4 columns for mobile */
+    }
+}
 </style>
-
+</div>
+{% endblock %}
 {% endblock content %}

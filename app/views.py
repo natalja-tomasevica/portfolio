@@ -14,6 +14,9 @@ def predicting_stars_galaxies_quasars_project(request):
 def user_churn_project(request):
     return render(request, 'data_projects/user_churn_project.html', {})
 
+def predicting_fitness_metrics_project(request):
+    return render(request, 'data_projects/predicting_fitness_metrics_project.html', {})
+
 def django_projects(request):
     return render(request, 'django_projects/django_projects.html', {})
 
