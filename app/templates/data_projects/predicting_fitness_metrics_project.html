@@ -1,11 +1,8 @@
 {% extends 'base.html' %}
 
-{% block content %}
-
 {% load static %}
 
 {% block inner_content %}
-
 
 <!DOCTYPE html>
 
@@ -14,7 +11,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
 <title>Predicting Fitness Metrics Project</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<div class="container-fluid my-5">
+<div class="container-fluid custom-content">
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7302,6 +7299,7 @@ a.anchor-link {
   }
 }
 </style>
+
 <!-- Load mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
 <!-- MathJax configuration -->
@@ -9614,12 +9612,10 @@ R2_dt: 0.69; R2_lr: 0.82
 <style>
 
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 body {
@@ -9665,6 +9661,7 @@ footer {
 }
 
 /* Navbar styles */
+
 .navbar {
   background-color: #B0A695;
   top: 0;
@@ -9678,20 +9675,26 @@ footer {
   bottom: 0;
 }
 
+.content {
+  margin-top: 60px;
+}
+
 .navbar-toggler {
-  border-radius: 50%;
+  border-radius: 0.5rem !important;
   padding: 5px;
+  width: 60px;
+  height: 40px;
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
 .navbar-brand, .nav-link {
   color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   height: 100%;
 }
 
@@ -9710,12 +9713,25 @@ footer {
 }
 
 .navbar a {
-    font-size: medium;
-  }
-  
+  font-size: medium;
+}
+
+.navbar .nav-link {
+  color: black !important;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-link:hover {
+  color: black !important;
+  background-color: transparent !important;
+}
+
+.navbar .dropdown-toggle {
+  padding-right: 5px;
+}
 
 </style>
 
 {% endblock %}
-
-{% endblock content %}

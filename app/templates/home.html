@@ -1,26 +1,20 @@
 {% extends 'base.html' %}
 
-{% block content %}
-
-{% load static %}
-
 {% block inner_content %}
 
-<head><title>Home</title></head>
+{% load static %}
+<title>Home</title>
 
-<div class="container-fluid my-5">
-  
-    <p class="mx-auto my-auto" style="font-size: larger;">
+<div class="container-fluid custom-content">
+  <p class="mx-auto my-auto" style="font-size: larger;">
     <i>Welcome to my personal website! Here, you will find information about my education, projects, skills, and experience.</i></br>
     <strong>Natalja Tomasevica - Aspiring Data Analyst with Expertise in Data-Driven Solutions, Machine Learning, and Full-Stack Development</strong>
   </p>
   
   <div class="row align-items-center">
-    <!-- Image Column -->
-     <div class="col-md-4">
+    <div class="col-md-4">
       <img src="{% static 'app/20240414_144221.jpg' %}" class="figure-img img-fluid rounded" alt="Natalja"></div>
-      <!-- Text Column -->
-       <div class="col-md-8">
+      <div class="col-md-8">
         <p class="card-text">
           <strong>Introduction</strong></br>
           I recently graduated from Northumbria University with a degree in Physics with Astrophysics. Pursuing a STEM degree equipped me with a solid foundation in physics 
@@ -49,5 +43,3 @@
   </div>
 
 {% endblock %}
-
-{% endblock content %}

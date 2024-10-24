@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
 
-{% block content %}
-{% load static %}
 {% block inner_content %}
-<head>
-    <title>Calculator Project</title>
-</head>
 
-<div class="container-fluid my-5">
-    <h2 class="mx-2 my-2">Calculator Projects</h2>
-   
+{% load static %}
+
+<title>Calculator Project</title>
+
+<div class="container-fluid custom-content">
+    <h2>Calculator Project</h2>
+    
     <div id="body_calculator">
         <div id="calculator">
             <input id="display" readonly>
@@ -34,25 +33,28 @@
             </div>
         </div>
     </div>
-
-
-<script>
-const display = document.getElementById("display");
-function appendToDisplay(input){
-    display.value += input;
-}
-function clearDisplay(){
-    display.value = "";
-}
-function calculate(){
-    try{
-        display.value = eval(display.value);
+    
+    <script>
+    const display = document.getElementById("display");
+    function appendToDisplay(input){
+        display.value += input;
     }
-    catch(error){
-        display.value = "Error";
+    
+    function clearDisplay(){
+        display.value = "";
     }
-}
-</script>
+    
+    function calculate(){
+        try{
+            display.value = eval(display.value);
+        }
+        catch(error){
+            display.value = "Error";
+        }
+    }
+    </script>
+    
+</div>
 
 <style>
 
@@ -66,39 +68,37 @@ function calculate(){
     background-color: hwb(0 95% 5%);
 }
 
-
-/* Calculator styles */
 #calculator {
     background-color: hsl(0, 0%, 15%);
     border-radius: 15px;
-    max-width: 100%; /* Responsive */
-    
+    max-width: 100%;
     padding: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    z-index: 1; /* Lower z-index than the dropdown */
-    position: relative; /* Necessary to ensure z-index works */
+    z-index: 1;
+    position: relative;
 }
 
 #display {
     width: 100%;
-    padding: 20px; /* Reduce padding for smaller screens */
-    font-size: 3rem; /* Larger text */
+    padding: 20px;
+    font-size: 3rem;
     text-align: left;
     border: none;
     background-color: hsl(0, 0%, 25%);
     color: white;
     height: 110px;
+    border-radius: 15px;
 }
 
 #keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px; /* Space between buttons */
-    padding: 10px; /* Reduce padding for smaller screens */
+    gap: 10px;
+    padding: 10px;
 }
 
 button {
-    width: 100%; /* Full width buttons */
+    width: 100%;
     height: 80px;
     border-radius: 50px;
     border: none;
@@ -129,22 +129,21 @@ button:active {
     background-color: hsl(35, 100%, 75%);
 }
 
-/* Media Queries for Mobile */
 @media (max-width: 768px) {
     #display {
-        font-size: 2.5rem; /* Slightly smaller font for display */
+        font-size: 2.5rem;
     }
-
+    
     button {
-        height: 60px; /* Adjust button height for smaller screens */
-        font-size: 1.5rem; /* Smaller button text */
+        height: 60px;
+        font-size: 1.5rem;
     }
-
+    
     #keys {
-        grid-template-columns: repeat(4, 1fr); /* Keep 4 columns for mobile */
+        grid-template-columns: repeat(4, 1fr);
     }
+    
 }
 </style>
-</div>
+
 {% endblock %}
-{% endblock content %}

@@ -1,107 +1,98 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block inner_content %}
 
 {% load static %}
 
-{% block inner_content %}
-<head>
-  <title>Data Projects</title>
-</head>
-<div class="container-fluid my-5">
-<h2 class="mx-2 my-2">Data Projects</h2>
+<title>Data Projects</title>
 
-<div class="container mx-auto my-auto">
-  <div class="row">
-
-    <div class="col-md-4 mb-3">
-      <div class="card h-100">
-        <img src="{% static 'app/fitness_metrics.jpeg' %}" class="card-img-top" alt="Fitness metrics" width='500px' height="250px">
-        <div class="card-body">
-          <h5 class="card-title">
-            <a href="/data_projects/predicting_fitness_metrics_project">Fitness Records Analysis and Prediction with Machine Learning</a>
-          </h5>
-          <p class="card-text">
-            <strong>Outcomes</strong>
-            <ul>
-              <li>Conducted exploratory data analysis and visualised results using Python libraries</li>
-              <li>Developed a machine learning model to predict fitness metrics based on fitness data, achieving an R-squared value of 0.82 with Linear Regression</li>
-            </ul>
-            <strong>Tools</strong>
-            <ul>
-              <li>Python, Jupyter Notebook, Pandas, NumPy, Seaborn, Matplotlib, Scikit-learn</li>
-            </ul>
-          </p>
+<div class="container-fluid custom-content">
+  <h2>Data Projects</h2>
+  
+  <div class="container mx-auto my-auto">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="{% static 'app/fitness_metrics.jpeg' %}" class="card-img-top" alt="Fitness metrics" width='500px' height="250px">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="/data_projects/predicting_fitness_metrics_project">Fitness Records Analysis and Prediction with Machine Learning</a>
+            </h5>
+            <p class="card-text">
+              <strong>Outcomes</strong>
+              <ul>
+                <li>Conducted exploratory data analysis and visualised results using Python libraries</li>
+                <li>Developed a machine learning model to predict fitness metrics based on fitness data, achieving an R-squared value of 0.82 with Linear Regression</li>
+              </ul>
+              <strong>Tools</strong>
+              <ul>
+                <li>Python, Jupyter Notebook, Pandas, NumPy, Seaborn, Matplotlib, Scikit-learn</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="{% static 'app/spiral_galaxy_NGC_2903.jpg' %}" class="card-img-top" alt="Spiral galaxy NGC 2903" width='500px' height="250px">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="/data_projects/predicting_stars_galaxies_quasars_project">Classification of Astronomical Objects with Machine Learning</a>
+            </h5>
+            <p class="card-text">
+              <strong>Outcomes</strong>
+              <ul>
+                <li>Utilised Python libraries to perform exploratory data analysis and create data visualisations</li>
+                <li>Built a machine learning model to classify astronomical objects (stars, galaxies, or quasars) using a dataset of 10,000 observations</li>
+                <li>Implemented classification algorithms (Decision Tree, Logistic Regression, K-Nearest Neighbours) to predict object classes</li>
+                <li>Achieved 99% accuracy with the Decision Tree model</li>
+              </ul>
+              <strong>Tools</strong>
+              <ul>
+                <li>Python, Jupyter Notebook, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="{% static 'app/churn_prediction.jpg' %}" class="card-img-top" alt="Churn prediction" width='500px' height="250px">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="/data_projects/user_churn_project">User Churn Prediction with Machine Learning</a>
+            </h5>
+            <p class="card-text">
+              <strong>Outcomes</strong>
+              <ul>
+                <li>Conducted exploratory data analysis, feature engineering, and data visualisation using Python libraries</li>
+                <li>Developed a machine learning model to predict user churn for a mobile application using a dataset of 15,000 records</li>
+                <li>Achieved 82.4% accuracy with a Logistic Regression model and a recall score of 0.179 using XGBoost</li>
+              </ul>
+              <strong>Tools</strong>
+              <ul>
+                <li>Python, Jupyter Notebook, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost</li>
+              </ul>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="col-md-4 mb-3">
-      <div class="card h-100">
-        <img src="{% static 'app/spiral_galaxy_NGC_2903.jpg' %}" class="card-img-top" alt="Spiral galaxy NGC 2903" width='500px' height="250px">
-        <div class="card-body">
-          <h5 class="card-title">
-            <a href="/data_projects/predicting_stars_galaxies_quasars_project">Classification of Astronomical Objects with Machine Learning</a>
-          </h5>
-          <p class="card-text">
-            <strong>Outcomes</strong>
-            <ul>
-              <li>Utilised Python libraries to perform exploratory data analysis and create data visualisations</li>
-              <li>Built a machine learning model to classify astronomical objects (stars, galaxies, or quasars) using a dataset of 10,000 observations</li>
-              <li>Implemented classification algorithms (Decision Tree, Logistic Regression, K-Nearest Neighbours) to predict object classes</li>
-              <li>Achieved 99% accuracy with the Decision Tree model</li>
-            </ul>
-            <strong>Tools</strong>
-            <ul>
-              <li>Python, Jupyter Notebook, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow</li>
-            </ul>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 mb-3">
-      <div class="card h-100">
-        <img src="{% static 'app/churn_prediction.jpg' %}" class="card-img-top" alt="Churn prediction" width='500px' height="250px">
-        <div class="card-body">
-          <h5 class="card-title">
-            <a href="/data_projects/user_churn_project">User Churn Prediction with Machine Learning</a>
-          </h5>
-          <p class="card-text">
-            <strong>Outcomes</strong>
-            <ul>
-              <li>Conducted exploratory data analysis, feature engineering, and data visualisation using Python libraries</li>
-              <li>Developed a machine learning model to predict user churn for a mobile application using a dataset of 15,000 records</li>
-              <li>Achieved 82.4% accuracy with a Logistic Regression model and a recall score of 0.179 using XGBoost</li>
-            </ul>
-            <strong>Tools</strong>
-            <ul>
-              <li>Python, Jupyter Notebook, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost</li>
-            </ul>
-          </p>
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
 
-
-</div>
-
 <style>
-  ul {
-    margin-bottom: 0px !important;
-    margin-top: 0px !important;
-  }
-  
-  p {
-    margin-bottom: 0px !important;
-    margin-top: 0px !important;
-  }
-  
-  </style>
+
+ul {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
+
+p {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
+
+</style>
+
 {% endblock %}
-
-{% endblock content %}
-

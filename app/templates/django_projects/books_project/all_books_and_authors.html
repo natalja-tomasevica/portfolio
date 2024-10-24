@@ -1,48 +1,43 @@
-
 {% extends 'base_books.html' %}
-{% block content %}
 
-<head>
-  <title>All Books and Authors</title>
-</head>
+{% block inner_content %}
 
-<h2>List of all books and authors</h2>
-</br>
-<center>
+<title>All Books and Authors</title>
 
-<div class="container" style="margin: 0px; width: 100%;">
-
-<table class="table table-hover" style="float: left; width: 45%; margin-right: 5px;">
-  <thead>
-    <tr style="text-align: center;">
-      <th>All Books</th>
-    </tr>
-  </thead>
-  <tbody class="table-group-divider">
-  {% for book in all_books %}
-  <tr style="text-align: center;">
-    <td><a href="{% url 'book_details' book.id %}">{{ book }}</a></td>
-  </tr>
-  {% endfor %}
-  </tbody>
-</table>
-
-  <table class="table table-hover" style="float: right; width: 45%; margin-left: 5px;">
-    <thead>
-      <tr style="text-align: center;">
-        <th>All Authors</th>
-      </tr>
-    </thead>
-    <tbody class="table-group-divider">
-    {% for author in all_authors %}
-    <tr style="text-align: center;">
-      <td><a href="{% url 'author_details' author.id %}">{{ author }}</a></td>
-    </tr>
-    {% endfor %}
-    </tbody>
-  </table>
-
+<div class="container-fluid custom-content">
+  <h2>All Books and Authors</h2>
+  
+  <div class="container mt-3" style="margin: 0px; width: 100%;">
+    <table class="table table-hover" style="float: left; width: 45%; margin-right: 5px;">
+      <thead>
+        <tr style="text-align: center;">
+          <th>All Books</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        {% for book in all_books %}
+        <tr style="text-align: center;">
+          <td><a href="{% url 'book_details' book.id %}">{{ book }}</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    
+    <table class="table table-hover" style="float: right; width: 45%; margin-left: 5px;">
+      <thead>
+        <tr style="text-align: center;">
+          <th>All Authors</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        {% for author in all_authors %}
+        <tr style="text-align: center;">
+          <td><a href="{% url 'author_details' author.id %}">{{ author }}</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
-</center>
 
-{% endblock content %}
+{% endblock %}

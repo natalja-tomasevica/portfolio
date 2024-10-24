@@ -1,34 +1,31 @@
 {% extends 'base_books.html' %}
 
-{% block content %}
+{% block inner_content %}
 
-<head>
-  <title>Author Details</title>
-</head>
+<title>Author Details</title>
 
-<h2>Detailed information about an author</h2>
-</br>
-
-<center>
-
-<div style="width: 70%;">
+<div class="container-fluid custom-content">
+  <h2>Detailed Information About an Author</h2>
+  
+  <div style="width: 70%; margin-top: 1rem;">
     <div class="card text-center">
-        <div class="card-header" style="text-align: left; margin: 0px; font-size: larger;">
-          <strong>{{ author }}</strong>
-        </div>
-        <div class="card-body">
-          <p class="card-text" style="text-align: left; margin: 0px;">Age: {{ author.age }}</p>
-          <p class="card-text" style="text-align: left; margin: 0px;">Languages: {{ author.languages }}</p>
-          <p class="card-text" style="text-align: start; margin: 0px; display: inline; ; float: left; margin-right: 10px;">Books: 
-            <ul style="margin: 0; padding: 0; list-style: square; display: inline;">
-              {% for book in books %}
-              <li style="float: left; margin-right: 20px; margin-left: 20px; padding: 0px;"><a href="{% url 'book_details' book.id %}">{{ book.title }}</a></li>
-              {% endfor %}
-            </ul>
-          </p>
-        </div>
-        <div class="card-footer text-body-secondary">
-          <div style="float: left;">
+      <div class="card-header" style="text-align: left; margin: 0px; font-size: larger;">
+        <strong>{{ author }}</strong>
+      </div>
+      <div class="card-body">
+        <p class="card-text" style="text-align: left; margin: 0px;">Age: {{ author.age }}</p>
+        <p class="card-text" style="text-align: left; margin: 0px;">Languages: {{ author.languages }}</p>
+        <p class="card-text" style="text-align: start; margin: 0px; display: inline; ; float: left; margin-right: 10px;">Books: 
+          <ul style="margin: 0; padding: 0; list-style: square; display: inline;">
+            {% for book in books %}
+            <li style="float: left; margin-right: 20px; margin-left: 20px; padding: 0px;"><a href="{% url 'book_details' book.id %}">{{ book.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </p>
+      </div>
+
+      <div class="card-footer text-body-secondary">
+        <div style="float: left;">
           <a href="{% url 'edit_author' author.id %}" class="btn btn-warning">Edit</a>
           <a href="{% url 'delete_author' author.id %}" class="btn btn-danger">Delete</a>
         </div>
@@ -36,11 +33,9 @@
           <a href="/django_projects/books_project/all_books_and_authors" class="btn btn-secondary">All Books and Authors</a>
           <a href="/django_projects/books_project/add_books_and_authors" class="btn btn-secondary">Add Books and Authors</a>
         </div>
-          
-        </div>
       </div>
+    </div>
+  </div>
 </div>
 
-</center>
-
-{% endblock content %}
+{% endblock %}

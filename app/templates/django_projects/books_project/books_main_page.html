@@ -1,19 +1,16 @@
 {% extends 'base_books.html' %}
 
-{% block content %}
+{% block inner_content %}
 
-<head>
-    <title>Books Project</title>
-</head>
+<title>Books Project Main Page</title>
 
-<div class="container-fluid mx-auto my-auto">
-
-    <h2 class="mx-2 my-2">Books Project</h2>
-    <p class="mx-auto my-auto">The purpose of this project is to allow users to store their books and information about authors in a MySQL database and access the data whenever they want.
+<div class="container-fluid custom-content">
+    <h2>Books Project</h2>
+    <p>The purpose of this project is to allow users to store their books and information about authors in a MySQL database and access the data whenever they want.
         Users can add new books and authors, delete and edit already existing books and authors, and search for books and authors using the search bar.
         Using the dropdown menu "Books Project" on the navigation bar, you can access the form for adding new books and authors and a list of already existing books and authors.
         Once you are on the page with all books and authors, you can click on each book title and author name to be redirected to the pages where the detailed information about each item is displayed.
         Then, you will be able to access the edit and delete options by clicking on buttons with respective names.
     </p>
 </div>
-{% endblock content %}
+{% endblock %}

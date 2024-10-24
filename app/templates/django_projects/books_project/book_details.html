@@ -1,29 +1,25 @@
 {% extends 'base_books.html' %}
 
-{% block content %}
+{% block inner_content %}
 
-<head>
-  <title>Book Details</title>
-</head>
+<title>Book Details</title>
 
-<h2>Detailed information about a book</h2>
-</br>
-
-<center>
-
-<div style="width: 70%;">
+<div class="container-fluid custom-content">
+  <h2>Detailed Information About a Book</h2>
+  
+  <div style="width: 70%; margin-top: 1rem;">
     <div class="card text-center">
-        <div class="card-header" style="text-align: left; margin: 0px; font-size: larger;">
-          <strong>{{ book }}</strong>
-        </div>
-        <div class="card-body">
-          <p class="card-text" style="text-align: left; margin: 0px;">Author: <a href="{% url 'author_details' book.author_id %}">{{ book.author }}</a></p>
-          <p class="card-text" style="text-align: left; margin: 0px;">Genre: {{ book.genre }}</p>
-          <p class="card-text" style="text-align: left; margin: 0px;">Number of pages: {{ book.pages }}</p>
-          <p class="card-text" style="text-align: left; margin: 0px;">Description: {{ book.description }}</p>
-        </div>
-        <div class="card-footer text-body-secondary">
-          <div style="float: left;">
+      <div class="card-header" style="text-align: left; margin: 0px; font-size: larger;">
+        <strong>{{ book }}</strong>
+      </div>
+      <div class="card-body">
+        <p class="card-text" style="text-align: left; margin: 0px;">Author: <a href="{% url 'author_details' book.author_id %}">{{ book.author }}</a></p>
+        <p class="card-text" style="text-align: left; margin: 0px;">Genre: {{ book.genre }}</p>
+        <p class="card-text" style="text-align: left; margin: 0px;">Number of pages: {{ book.pages }}</p>
+        <p class="card-text" style="text-align: left; margin: 0px;">Description: {{ book.description }}</p>
+      </div>
+      <div class="card-footer text-body-secondary">
+        <div style="float: left;">
           <a href="{% url 'edit_book' book.id %}" class="btn btn-warning">Edit</a>
           <a href="{% url 'delete_book' book.id %}" class="btn btn-danger">Delete</a>
         </div>
@@ -32,8 +28,8 @@
           <a href="/django_projects/books_project/add_books_and_authors" class="btn btn-secondary">Add Books and Authors</a>
         </div>
       </div>
+    </div>
+  </div>
 </div>
 
-</center>
-
-{% endblock content %}
+{% endblock %}

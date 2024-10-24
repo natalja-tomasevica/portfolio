@@ -1,30 +1,28 @@
-
 {% extends 'base_books.html' %}
 
-{% block content %}
+{% block inner_content %}
 
-<head>
-    <title>Search Books and Authors</title>
-</head>
+<title>Search Books and Authors</title>
 
-<h2>Books</h2>
+<div class="container-fluid custom-content">
+    <h2>Books</h2>
+    
+    <ul>
+        {% for book in books %}
+        <li><a href="{% url 'book_details' book.id %}">{{book.title }}</a></li>
+        {% empty %}
+        <li>No Books Found</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Authors</h2>
+    
+    <ul>
+        {% for author in authors %}
+        <li><a href="{% url 'author_details' author.id %}">{{ author.full_name }}</a></li>
+        {% empty %}
+        <li>No Authors Found</li>
+        {% endfor %}
+    </ul>
 
-<ul>
-    {% for book in books %}
-    <li><a href="{% url 'book_details' book.id %}">{{book.title }}</a></li>
-    {% empty %}
-    <li>No book found</li>
-    {% endfor %}
-</ul>
-
-<h2>Authors</h2>
-
-<ul>
-    {% for author in authors %}
-    <li><a href="{% url 'author_details' author.id %}">{{ author.full_name }}</a></li>
-    {% empty %}
-    <li>No author found</li>
-    {% endfor %}
-</ul>
-
-{% endblock content %}
+{% endblock %}

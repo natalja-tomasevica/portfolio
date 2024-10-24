@@ -1,51 +1,78 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block inner_content %}
 
 {% load static %}
 
-<head>
-  <title>Django Projects</title>
-</head>
+<title>Django Projects</title>
 
-
-<h2 class="mx-2 my-2">Django Projects</h2>
-
-<div class="container mx-auto my-auto">
-
-  <div class="row">
-    <div class="col-md-4 mb-3">
-      <div class="card h-100">
-        <img src="{% static 'app/calculator.jpg' %}" class="card-img-top" alt="Calculator" width='500px' height="250px">
-        <div class="card-body">
-          <h5 class="card-title"><a href="/django_projects/calculator_project">
-            Building a calculator app</a></h5>
+<div class="container-fluid custom-content">
+  <h2>Django Projects</h2>
+  
+  <div class="container mx-auto my-auto">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="{% static 'app/calculator.jpg' %}" class="card-img-top" alt="Calculator" width='500px' height="250px">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="/django_projects/calculator_project">Interactive Calculator Application</a>
+            </h5>
             <p class="card-text">
-              <strong>Description:</strong> Built a simple calculator that can perform the main arithmetic operations</br>
-              <strong>Technologies used:</strong> Django</br>
-              <strong>Languages:</strong> Python, JavaScript, CSS (a style sheet language), HTML (a markup language)</br>
-              <strong>Outcome:</strong> Successfully built a calculator and put it on my website
+              <strong>Outcomes</strong>
+              <ul>
+                <li>Created a fully functional calculator web application</li>
+                <li>Implemented real-time calculation, providing results without page reload</li>
+                <li>Styled the interface for an interactive user experience, including hover effects and button animations</li>
+                <li>Developed a machine learning model to predict fitness metrics based on fitness data, achieving an R-squared value of 0.82 with Linear Regression</li>
+              </ul>
+              <strong>Tools</strong>
+              <ul>
+                <li>Python, Django, JavaScript, HTML, CSS, Bootstrap</li>
+              </ul>
             </p>
           </div>
         </div>
       </div>
-
-    <div class="col-md-4 mb-3">
-      <div class="card h-100">
-        <img src="{% static 'app/books.jpg' %}" class="card-img-top" alt="Books" width='500px' height="250px">
-        <div class="card-body">
-          <h5 class="card-title"><a href="/django_projects/books_project/books_main_page">Building a books app that allows users to perform CRUD operations</a></h5>
-          <p class="card-text">
-            <strong>Description:</strong> Built an app, where users can create, read, update, and delete data about books and authors, which is stored in a MySQL database</br>
-            <strong>Technologies used:</strong> Django, MySQL</br>
-            <strong>Languages:</strong> Python, SQL, JavaScript, CSS (a style sheet language), HTML (a markup language)</br>
-            <strong>Outcome:</strong> Successfully built a books app and put it on my website
-          </p>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="{% static 'app/books.jpg' %}" class="card-img-top" alt="Books" width='500px' height="250px">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="/django_projects/books_project/books_main_page">Books and Authors Management System</a>
+            </h5>
+            <p class="card-text">
+              <strong>Outcomes</strong>
+              <ul>
+                <li>Developed a web application to allow users to add, edit, and delete book and author records</li>
+                <li>Implemented CRUD operations with data stored in a database</li>
+                <li>Used Django Forms for input validation, ensuring data integrity and an intuitive user interface</li>
+                <li>Designed dynamic web pages</li>
+              </ul>
+              <strong>Tools</strong>
+              <ul>
+                <li>Python, Django, Django Template Language, HTML, CSS, Bootstrap</li>
+              </ul>
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-</div>
 
-{% endblock content %}
+<style>
+
+ul {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
+
+p {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
+
+</style>
+
+{% endblock %}

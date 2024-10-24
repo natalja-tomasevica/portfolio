@@ -2,29 +2,28 @@
 
 <nav class="navbar navbar-expand-md">
   <div class="container-fluid">
-    <a class="navbar-brand">Portfolio</a>
+    <a class="navbar-brand"><strong><i>Portfolio</i></strong></a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Projects
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/data_projects">Data Projects</a></li>
-            <li><a class="dropdown-item" href="/django_projects">Django Projects</a></li>
-          </ul>
-        </li>
-      </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/data_projects">Data Projects</a></li>
+                        <li><a class="dropdown-item" href="/django_projects">Django Projects</a></li>
+                    </ul>
+            </li>
+        </ul>
     </div>
-  </div>
+</div>
 </nav>
 
 <!-- Content section -->
@@ -32,24 +31,26 @@
 </div>
 
 <style>
-  /* Navbar styles */
-  .navbar {
-    background-color: #B0A695; /* Light Blush Pink */
+
+.navbar {
+    background-color: #B0A695;
     top: 0;
     z-index: 1000;
     position: fixed;
     width: 100%;
     height: 50px;
-  }
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
 
-  /* Spacing for content so it isn't hidden behind navbar */
-  .content {
-    margin-top: 60px; /* Adjust based on navbar height */
-  }
+.content {
+    margin-top: 60px;
+}
 
-  /* Other styles here... */
-  .navbar-toggler {
-    border-radius: 0% !important;
+.navbar-toggler {
+    border-radius: 0.5rem !important;
     padding: 5px;
     width: 60px;
     height: 40px;
@@ -59,30 +60,27 @@
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
-/* Centering text in the navbar */
 .navbar-brand, .nav-link {
-    color: black; /* Black for text */
-    display: flex !important; /* Use flexbox for centering */
-    align-items: center !important; /* Center vertically */
-    justify-content: center !important; /* Center horizontally */
-    height: 100%; /* Make link take full height */
+    color: black;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100%;
+
 }
 
-/* Dropdown menu styles */
 .dropdown-menu {
-    border-radius: 0.5rem; /* Rounds the corners of the dropdown menu */
+    border-radius: 0.5rem;
 }
 
-/* Dropdown item color */
 .dropdown-item {
-    color: black; /* Black for dropdown items */
-    border-radius: 0.5rem; /* Rounds the corners of each dropdown item */
+    color: black;
+    border-radius: 0.5rem;
 }
 
-/* Ensures background color is applied to the navbar when collapsed */
 .navbar-collapse {
-    background-color: #B0A695; /* Light Blush Pink for the collapsed navbar */
-    border-radius: 0.5rem; /* Rounds the corners of the navbar */
+    background-color: #B0A695;
+    border-radius: 0.5rem;
 }
 
 .navbar a {
@@ -101,9 +99,8 @@
     background-color: transparent !important;
 }
 
-/* Optional: Adjust the dropdown toggle specifically */
 .navbar .dropdown-toggle {
-    padding-right: 5px; /* Space between text and dropdown arrow */
+    padding-right: 5px;
 }
 
 </style>

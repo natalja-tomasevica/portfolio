@@ -1,64 +1,54 @@
-
 {% extends 'base_books.html' %}
 
-{% block content %}
+{% block inner_content %}
 
-<head>
-    <title>Add Books and Authors</title>
-</head>
+<title>Add Books and Authors</title>
 
-<h2>Add books and authors</h2>
-
-<body>
-
-<center>
+<div class="container-fluid custom-content">
+    <h2>Add Books and Authors</h2>
     
-    <div class="container mt-5">
+    <div class="container mt-3">
         <form method="POST">
             {% csrf_token %}
-
+            
             <div class="form-group">
-            <label for="id_title"></label>
-            <input type="text" name="title" class="form-control" id="id_title" placeholder="Book Title">
-            </div>
-
-            <div class="form-group">
-                <label for="id_author_full_name"></label>
-                <input type="text" name="author_full_name" class="form-control" id="id_author_full_name" placeholder="Author Full Name">
+                <label for="id_title">Book Title</label>
+                <input type="text" name="title" class="form-control" id="id_title" placeholder="Enter Book Title" required>
             </div>
             
             <div class="form-group">
-                <label for="id_author_age"></label>
-                <input type="number" name="author_age" class="form-control" id="id_author_age" placeholder="Author Age">
+                <label for="id_author_full_name">Author Full Name</label>
+                <input type="text" name="author_full_name" class="form-control" id="id_author_full_name" placeholder="Enter Author Full Name" required>
             </div>
-
-            <div class="form-group">
-                <label for="id_author_languages"></label>
-                <input type="text" name="author_languages" class="form-control" id="id_author_languages" placeholder="Author Languages">
-            </div>
-
-            <div class="form-group">
-                <label for="id_genre"></label>
-                <input type="text" name="genre" class="form-control" id="id_genre" placeholder="Book Genre">
-            </div>
-
-            <div class="form-group">
-                <label for="id_pages"></label>
-                <input type="number" name="pages" class="form-control" id="id_pages" placeholder="Number of Pages" >
-            </div>
-
-            <div class="form-group">
-                <label for="id_description"></label>
-                <textarea name="description" class="form-control" id="id_description" placeholder="Book Description" rows="3"></textarea>
-            </div>
-
             
-
-        </br><button class="btn btn-secondary">Add</button>
+            <div class="form-group">
+                <label for="id_author_age">Author Age</label>
+                <input type="number" name="author_age" class="form-control" id="id_author_age" placeholder="Enter Author Age" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="id_author_languages">Author Languages</label>
+                <input type="text" name="author_languages" class="form-control" id="id_author_languages" placeholder="Enter Author Languages" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="id_genre">Book Genre</label>
+                <input type="text" name="genre" class="form-control" id="id_genre" placeholder="Enter Book Genre" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="id_pages">Number of Pages</label>
+                <input type="number" name="pages" class="form-control" id="id_pages" placeholder="Enter Number of Pages" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="id_description">Book Description</label>
+                <textarea name="description" class="form-control" id="id_description" placeholder="Enter Book Description" rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-secondary mt-3">Add</button>
         </form>
     </div>
-</body>
+</div>
 
-</center>
-
-{% endblock content%}
+{% endblock %}

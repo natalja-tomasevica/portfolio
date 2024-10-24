@@ -1,21 +1,16 @@
-
 {% extends 'base_books.html' %}
 
-{% block content %}
+{% block inner_content %}
 
-<head>
-    <title>Delete Book</title>
-</head>
+<title>Delete Book</title>
 
-<center>
-
-<p>Are you sure you want to delete the book "{{ book.title }}"?</p>
-<form method="POST">
-    {% csrf_token %}
-    <button type="submit" class="btn btn-success">Delete</button>
-    <a href="{% url 'book_details' book.id %}" class="btn btn-danger">Cancel</a>
-</form>
-
-</center>
+<div class="container-fluid custom-content">
+    <h2>Are you sure you want to delete the book "{{ book.title }}"?</h2>
+    <form method="POST"style="margin-top: 1rem;">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Delete</button>
+        <a href="{% url 'book_details' book.id %}" class="btn btn-danger">Cancel</a>
+    </form>
+</div>
 
 {% endblock %}
