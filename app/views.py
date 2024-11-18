@@ -17,6 +17,9 @@ def user_churn_project(request):
 def predicting_fitness_metrics_project(request):
     return render(request, 'data_projects/predicting_fitness_metrics_project.html', {})
 
+def digital_marketing_campaigns_performance_analysis_project(request):
+    return render(request, 'data_projects/digital_marketing_campaigns_performance_analysis_project.html', {})
+
 def django_projects(request):
     return render(request, 'django_projects/django_projects.html', {})
 

@@ -10,6 +10,7 @@ urlpatterns = [
     path('data_projects/predicting_stars_galaxies_quasars_project', views.predicting_stars_galaxies_quasars_project, name = 'predicting_stars_galaxies_quasars_project'),
     path('data_projects/user_churn_project', views.user_churn_project, name = 'user_churn_project'),
     path('data_projects/predicting_fitness_metrics_project', views.predicting_fitness_metrics_project, name = 'predicting_fitness_metrics_project'),
+    path('data_projects/digital_marketing_campaigns_performance_analysis_project', views.digital_marketing_campaigns_performance_analysis_project, name = 'digital_marketing_campaigns_performance_analysis_project'),
     
     path('django_projects', views.django_projects, name = 'django_projects'),
     
